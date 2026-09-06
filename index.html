@@ -4,7 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>菅沼 一枚攻略図(2026・実証版)</title>
-<meta name="description" content="菅沼(群馬県片品村・標高約1730m)のルアー・フライボート釣り攻略図。公式規則・OSM実測地形・実釣記録の採掘だけで組んだ出典明示型。2026年営業日カレンダー・当日判定パネル付き。">
+<meta name="description" content="菅沼(群馬県片品村・標高約1,730m)のルアー・フライボート釣り攻略図。公式規則・OSM実測地形・実釣記録の採掘だけで組んだ出典明示型。2026年営業日カレンダー・当日判定パネル付き。">
+<!-- meta-share v1 -->
+<link rel="canonical" href="https://oatbox99.github.io/sugenuma-map/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="菅沼 一枚攻略図(2026・実証版)">
+<meta property="og:description" content="菅沼(群馬県片品村・標高約1,730m)のルアー・フライボート釣り攻略図。公式規則・OSM実測地形・実釣記録の採掘だけで組んだ出典明示型。2026年営業日カレンダー・当日判定パネル付き。">
+<meta property="og:url" content="https://oatbox99.github.io/sugenuma-map/">
+<meta property="og:site_name" content="湖 一枚攻略図 — 5湖姉妹編(丸沼・大尻沼・菅沼・湯ノ湖・中禅寺湖)">
+<meta property="og:image" content="https://oatbox99.github.io/sugenuma-map/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="菅沼 一枚攻略図のヘッダー">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f4f2e9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a1b22" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f2e9'/%3E%3Cpath d='M5 19c3-7 8-10 13-9 4 1 9 4 8 9-1 4-7 7-13 6-5-1-9-2-8-6z' fill='%233d7f92'/%3E%3Ccircle cx='23' cy='10' r='3.4' fill='%239c7a1a'/%3E%3C/svg%3E">
+<!-- /meta-share v1 -->
 </head>
 <body>
 <style>
@@ -16,7 +33,7 @@
     --water0:#c9e4e0; --water1:#7fb8bd; --water2:#3d7f92;
     --shore:#2f6e84;
     --series:#20708f; --warn:#ad721e;
-    --est:#a1661b; --est-bg:rgba(173,114,30,.10);
+    --est:#a1661b; --est-ink:#8a5416; --est-bg:rgba(173,114,30,.10);
     --ok:#477a45; --ng:#9c4433; --ng-bg:rgba(156,68,51,.08);
     --halo:#f4f2e9;
   }
@@ -29,7 +46,7 @@
       --water0:#123039; --water1:#1a4550; --water2:#276374;
       --shore:#66a8b8;
       --series:#4396b8; --warn:#b98220;
-      --est:#c78e2d; --est-bg:rgba(185,130,32,.14);
+      --est:#c78e2d; --est-ink:#c78e2d; --est-bg:rgba(185,130,32,.14);
       --ok:#6da166; --ng:#c06a55; --ng-bg:rgba(192,106,85,.12);
       --halo:#0a1b22;
     }
@@ -42,7 +59,7 @@
     --water0:#123039; --water1:#1a4550; --water2:#276374;
     --shore:#66a8b8;
     --series:#4396b8; --warn:#b98220;
-    --est:#c78e2d; --est-bg:rgba(185,130,32,.14);
+    --est:#c78e2d; --est-ink:#c78e2d; --est-bg:rgba(185,130,32,.14);
     --ok:#6da166; --ng:#c06a55; --ng-bg:rgba(192,106,85,.12);
     --halo:#0a1b22;
   }
@@ -59,12 +76,13 @@
 
   header{border-bottom:2px solid var(--gold); padding-bottom:14px; margin-bottom:18px}
   .eyebrow{color:var(--gold); letter-spacing:.35em; text-transform:uppercase; font-size:11px; margin-bottom:6px}
-  h1{font-size:34px; letter-spacing:.06em; text-wrap:balance}
-  h1 .pref{font-size:18px; color:var(--ink2); letter-spacing:.12em}
+  h1{font-size:34px; letter-spacing:.06em; text-wrap:balance; word-break:keep-all}
+  h1 .pref{display:inline-block; font-size:18px; color:var(--ink2); letter-spacing:.12em; word-break:normal}
+  @media (max-width:600px){ h1 .pref{display:block; font-size:15px; margin-top:4px} }
   .subtitle{color:var(--ink2); margin-top:6px; max-width:66em}
   .headmeta{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; align-items:center}
   .chip{display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); border-radius:999px; padding:2px 12px; font-size:12.5px; color:var(--ink2); background:var(--panel)}
-  .chip b{color:var(--ink); font-weight:600}
+  .chip b{color:var(--ink); font-weight:600; flex-shrink:0; white-space:nowrap}
   .lakenav{display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:14px}
   .ln-label{font-size:12.5px; font-weight:700; color:var(--gold-strong); letter-spacing:.14em}
   .ln-tabs{display:inline-flex; flex-wrap:wrap; border:1.5px solid var(--gold); border-radius:8px; overflow:hidden; background:var(--panel)}
@@ -75,6 +93,19 @@
   a.ln-tab:focus-visible{outline:2px solid var(--gold-strong); outline-offset:-2px}
   .ln-on{background:var(--gold); color:var(--bg); cursor:default}
   .ln-now{font-size:10px; font-weight:600; border:1px solid currentColor; border-radius:3px; padding:0 5px; margin-left:7px; letter-spacing:.08em}
+  /* ln-status */
+  .ln-dot{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; border:1.5px solid var(--muted); box-sizing:border-box; flex:none; vertical-align:middle}
+  .ln-dot.st-open{background:var(--ok); border-color:var(--ok)}
+  .ln-dot.st-rest{background:var(--ng,#9c4433); border-color:var(--ng,#9c4433)}
+  .ln-dot.st-sub{background:var(--gold); border-color:var(--gold-strong)}
+  .ln-dot.st-off{background:transparent}
+  .ln-on .ln-dot.st-off{border-color:var(--bg)}
+  .ln-today{flex-basis:100%; margin:0; font-size:12px; line-height:1.7; color:var(--ink2)}
+  .ln-today:empty{display:none}
+  .ln-today b{color:var(--ink)}
+  .ln-st{white-space:nowrap; margin-right:8px; font-weight:600}
+  .ln-st.st-open{color:var(--ok)} .ln-st.st-rest{color:var(--ng,#9c4433)} .ln-st.st-sub{color:var(--gold-strong)} .ln-st.st-off{color:var(--muted)}
+  .ln-note{color:var(--muted); font-weight:400}
   @media (max-width:600px){
     .ln-tabs{border:none; background:none; overflow:visible; gap:6px}
     .ln-tab, .ln-tab + .ln-tab{border:1.5px solid var(--gold); border-radius:8px; background:var(--panel); padding:6px 12px; font-size:13px}
@@ -85,6 +116,7 @@
   .dot-solid{width:12px;height:12px;border-radius:50%;background:var(--gold);flex:none}
   .dot-dash{width:12px;height:12px;border-radius:50%;border:2px dashed var(--est);background:var(--est-bg);flex:none}
   .dot-open{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--muted);flex:none}
+  .dot-obs{width:12px;height:12px;border-radius:50%;background:var(--series);flex:none}
 
   .maingrid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap:18px; align-items:start; margin-top:16px}
   @media (max-width:1080px){ .maingrid{grid-template-columns:1fr 1fr} }
@@ -125,7 +157,7 @@
   .pt b{color:var(--ink)}
   .pt .d{color:var(--ink2)}
   .pt .s{color:var(--muted); font-size:12px}
-  #lakemap g.dim{opacity:.25}
+  #lakemap g.dim{opacity:.42}
   #lakemap g.hot circle{fill:var(--gold); stroke:var(--halo); stroke-width:2; stroke-dasharray:none; filter:drop-shadow(0 0 5px var(--gold))}
   #lakemap g.hot text.pn{fill:var(--bg)}
   #lakemap g.hot text.pl{fill:var(--gold-strong); font-weight:700}
@@ -153,6 +185,7 @@
   .openbadge{display:inline-flex; align-items:center; gap:8px; border-radius:6px; padding:6px 14px; font-size:14.5px; font-weight:700; margin-top:12px}
   .openbadge.is-open{background:var(--ok); color:var(--bg)}
   .openbadge.is-closed{background:var(--ng-bg); color:var(--ng); border:1.5px dashed var(--ng)}
+  .openbadge.is-unknown{background:var(--est-bg); color:var(--est-ink); border:1.5px dashed var(--est)}
   .nextopen{font-size:13px; color:var(--ink2); margin-top:6px}
   .nextopen b{color:var(--gold-strong)}
   .selrow{display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 2px; align-items:center}
@@ -203,7 +236,24 @@
   .sl-fill{position:absolute; top:1px; bottom:1px; background:var(--series); border-radius:2px; opacity:.85}
   .sl-note{grid-column:2; font-size:12px; color:var(--ink2); margin-top:-4px}
   .mapscroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .mapscroll:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+  .mapswipe{display:none}
+  @media (max-width:680px){ .mapswipe{display:block; color:var(--gold-strong); font-size:12.5px; margin:0 4px 4px; letter-spacing:.04em} }
   @media (max-width:680px){ .mapscroll svg{min-width:680px} }
+  /* PRINT v1 */
+  @media print{
+    @page{size:A4; margin:9mm}
+    :root,:root[data-theme="dark"],:root[data-theme="light"]{ color-scheme:light; --bg:#f4f2e9; --panel:#ece9d9; --panel2:#e6e2cf; --ink:#26281f; --ink2:#555140; --muted:#665f49; --gold:#9c7a1a; --gold-strong:#856712; --line:#d5cfb2; --hair:#ccc4a6; --water0:#c9e4e0; --water1:#7fb8bd; --water2:#3d7f92; --shore:#2f6e84; --series:#20708f; --warn:#ad721e; --est:#a1661b; --est-ink:#8a5416; --est-bg:rgba(173,114,30,.10); --ok:#477a45; --ng:#9c4433; --ng-bg:rgba(156,68,51,.08); --halo:#f4f2e9; }
+    html,body{background:#fff !important}
+    body{font-size:11.5px}
+    .lakenav,.ln-today,.gocheck a[href]:after{display:none !important}
+    table,figure,svg,.calm,.pointlist .pt{break-inside:avoid; page-break-inside:avoid}
+    .mapscroll{overflow:visible !important}
+    svg{max-width:100% !important; height:auto}
+    svg#lakemap{max-height:240mm; width:auto}
+    a{color:inherit; text-decoration:none}
+    button{border-color:#999}
+  }
 </style>
 
 <div class="sheet">
@@ -214,15 +264,74 @@
   <nav class="lakenav" aria-label="姉妹編マップの切替">
     <span class="ln-label">⇄ 姉妹編</span>
     <div class="ln-tabs">
-      <a class="ln-tab" href="https://oatbox99.github.io/marunuma-map/" title="丸沼 一枚攻略図へ移動">丸沼</a>
-      <a class="ln-tab" href="https://oatbox99.github.io/ojirinuma-map/" title="大尻沼 一枚攻略図へ移動">大尻沼</a>
-      <span class="ln-tab ln-on" aria-current="page">菅沼<span class="ln-now">表示中</span></span>
-      <a class="ln-tab" href="https://oatbox99.github.io/yunoko-map/" title="湯ノ湖 一枚攻略図へ移動">湯ノ湖</a>
-      <a class="ln-tab" href="https://oatbox99.github.io/chuzenjiko-map/" title="中禅寺湖 一枚攻略図へ移動">中禅寺湖</a>
+      <a class="ln-tab" data-lake="marunuma" href="https://oatbox99.github.io/marunuma-map/" title="丸沼 一枚攻略図へ移動">丸沼</a>
+      <a class="ln-tab" data-lake="ojirinuma" href="https://oatbox99.github.io/ojirinuma-map/" title="大尻沼 一枚攻略図へ移動">大尻沼</a>
+      <span class="ln-tab ln-on" aria-current="page" data-lake="sugenuma">菅沼<span class="ln-now">表示中</span></span>
+      <a class="ln-tab" data-lake="yunoko" href="https://oatbox99.github.io/yunoko-map/" title="湯ノ湖 一枚攻略図へ移動">湯ノ湖</a>
+      <a class="ln-tab" data-lake="chuzenjiko" href="https://oatbox99.github.io/chuzenjiko-map/" title="中禅寺湖 一枚攻略図へ移動">中禅寺湖</a>
     </div>
+    <p class="ln-today" id="ln-today"></p>
   </nav>
+  <script>/* LAKENAV-STATUS v1 */
+(function(){
+  /* 5湖の当日可否。各ページの SEASONS/OPEN と同じ 2026年日程(年次更新は5ページ同時に行う。navtest.sh で全日一致を検証) */
+  var Y=2026;
+  var L=[
+   {id:'marunuma',n:'丸沼',open:[[[4,25],[11,30]]],tip:'4/25〜11/30(4/25-26は特別解禁=ルアー・フライ限定)。8月にトライアスロン休止の実績あり(2025は2日間・当年日程は要確認)'},
+   {id:'ojirinuma',n:'大尻沼',open:[[[5,16],[10,31]]],tip:'偶数年=5/16〜10/31・奇数年は5〜6月の土日限定の特別解禁のみ(隔年パターンは推定・公式未発表)・完全予約制'},
+   {id:'sugenuma',n:'菅沼',days:[[6,20],[6,21],[6,27],[6,28],[7,1],[7,5],[7,6],[7,8],[7,11],[7,12],[7,19],[7,20],[7,25],[7,26],[7,30],[7,31],[8,1],[8,2],[8,6],[8,7],[8,20],[8,21],[8,22],[8,28],[8,29],[8,30],[9,2],[9,3],[9,5],[9,6],[9,9],[9,11],[9,12],[9,13],[9,16],[9,19],[9,20],[9,21],[9,22],[9,23],[9,26],[9,27],[10,2],[10,4],[10,7],[10,10],[10,11],[10,12],[10,14],[10,15],[10,17],[10,18]],tip:'指定営業日(6/20〜10/18の52日)のみ・完全予約制'},
+   {id:'yunoko',n:'湯ノ湖',open:[[[5,1],[9,30]]],tip:'5/1〜9/30・原則毎日'},
+   {id:'chuzenjiko',n:'中禅寺湖',open:[[[4,1],[9,19]]],sub:[[[9,20],[10,31]]],tip:'岸4/1〜9/19・船4/20〜9/19、9/20〜10/31はワカサギのみ'}
+  ];
+  var LAB={open:'釣り可',rest:'休業日',sub:'ワカサギのみ',off:'期間外'};
+  function inR(v,r){var a=r[0][0]*100+r[0][1], b=r[1][0]*100+r[1][1]; return a<=b ? (v>=a&&v<=b) : (v>=a||v<=b);}
+  function status(id,y,m,d){
+    if(y!==Y) return null;
+    var v=m*100+d, l=null;
+    for(var i=0;i<L.length;i++){ if(L[i].id===id) l=L[i]; }
+    if(!l) return null;
+    if(l.days){
+      for(var j=0;j<l.days.length;j++){ if(l.days[j][0]===m&&l.days[j][1]===d) return 'open'; }
+      var f=l.days[0], t=l.days[l.days.length-1];
+      return inR(v,[f,t]) ? 'rest' : 'off';
+    }
+    for(var k=0;k<l.open.length;k++){ if(inR(v,l.open[k])) return 'open'; }
+    if(l.sub){ for(var q=0;q<l.sub.length;q++){ if(inR(v,l.sub[q])) return 'sub'; } }
+    return 'off';
+  }
+  function render(){
+    if(typeof document==='undefined'||!document.querySelectorAll) return;
+    var now=new Date(), y=now.getFullYear(), m=now.getMonth()+1, d=now.getDate();
+    var wd=['日','月','火','水','木','金','土'];
+    var line=document.getElementById('ln-today');
+    var tabs=document.querySelectorAll('.ln-tab[data-lake]');
+    if(y!==Y){
+      if(line) line.innerHTML='⚠ 姉妹編の可否表示は<b>'+Y+'年日程版</b> — '+y+'年の日程は各湖の公式発表で確認';
+      return;
+    }
+    var parts=[];
+    for(var i=0;i<L.length;i++){
+      var st=status(L[i].id,y,m,d);
+      parts.push('<span class="ln-st st-'+st+'"><i class="ln-dot st-'+st+'" aria-hidden="true"></i>'+L[i].n+' '+LAB[st]+'</span>');
+    }
+    for(var t=0;t<tabs.length;t++){
+      var tab=tabs[t], id=tab.getAttribute('data-lake'), st2=status(id,y,m,d);
+      if(!st2) continue;
+      var dot=document.createElement('i'); dot.className='ln-dot st-'+st2; dot.setAttribute('aria-hidden','true');
+      tab.insertBefore(dot, tab.firstChild);
+      var tipL=null; for(var u=0;u<L.length;u++){ if(L[u].id===id) tipL=L[u]; }
+      var tip=(tab.getAttribute('title')||'')+(tab.getAttribute('title')?' — ':'')+'今日は'+LAB[st2]+'('+Y+'年日程: '+(tipL?tipL.tip:'')+')';
+      tab.setAttribute('title',tip);
+      if(tab.tagName==='A'&&tipL) tab.setAttribute('aria-label', tipL.n+' 一枚攻略図へ移動(今日は'+LAB[st2]+')');
+    }
+    if(line) line.innerHTML='今日 '+m+'/'+d+'('+wd[now.getDay()]+')の可否 — '+Y+'年公式日程からの自動判定。当日の臨時休業・天候・予約状況は各湖に確認: '+parts.join(' ')+(m===8?' <span class="ln-note">(丸沼・大尻沼は8月にイベント休止の実績あり — 当年日程は未反映)</span>':'');
+  }
+  if(typeof window!=='undefined'){ window.LAKENAV_STATUS={status:status, Y:Y}; }
+  render();
+})();
+</script>
   <div class="headmeta">
-    <span class="chip"><b>2026営業</b> 6/20〜10/18の指定52日のみ(要予約)</span>
+    <span class="chip"><b>2026シーズン</b> 6/20〜10/18の指定52日のみ(要予約)</span>
     <span class="chip"><b>釣法</b> ルアー・フライのボート釣りのみ/全魚C&amp;R</span>
     <span class="chip"><b>最大水深</b> 約75m(公式・複数文献)</span>
     <span class="chip"><b>受付</b> 菅沼キャンプ村 0278-58-2958</span>
@@ -231,6 +340,7 @@
     <span class="lg"><span class="dot-solid"></span>確定 — 公式規則・OSM実測・一次記録の逐語</span>
     <span class="lg"><span class="dot-dash"></span>推定 — 実釣記の相対記述から位置・値を推定(誤差あり)</span>
     <span class="lg"><span class="dot-open"></span>一般論・二次 — 出典が古い/裏取り1系統のみ</span>
+    <span class="lg"><span class="dot-obs"></span>実測 — 日付つきの実釣記録・公式の観測記録(規則ではない)</span>
   </div>
 </header>
 
@@ -238,6 +348,7 @@
 <div class="hero" id="hero">
   <h2 class="mincho">今日は釣りができる? どう釣る? <span class="today" id="todayline"></span></h2>
   <div id="openstate"></div>
+  <noscript><p class="nextopen">⚠ JavaScriptが無効のため、当日の営業判定・時期別の推奨・カレンダーは表示されません。営業期間と受付先は上の要約チップと本文の「2026年の営業と予約」表を参照し、出発前に公式サイト・電話で当日情報を確認してください。</p></noscript>
   <div class="selrow" id="phasechips" role="group" aria-label="時期の選択"><span class="sl">時期</span></div>
   <p class="binnote">※時期の区分は実釣記録の分布による便宜的なもの。営業日判定は2026年公式日程(下のカレンダー)と連動。</p>
   <div class="selrow" id="stylerow" role="group" aria-label="スタイルの選択"><span class="sl">スタイル</span>
@@ -250,6 +361,8 @@
   <div class="gocheck"><b>出発前に必ず当日情報を確認</b> — このページは実測アーカイブで、当日の予約空き・気温・水位は載らない:
     <a href="https://www.sugenuma.com/fishing" rel="noopener">公式 釣り情報(解禁日・規則・料金)</a>/
     <a href="https://www.sugenuma.com/" rel="noopener">公式トップ(お知らせ — ただし2026年はシーズン中の更新停止を確認済、当日情報は電話が確実)</a>/
+    <a href="https://tenki.jp/leisure/3/13/66/43630/" rel="noopener">tenki.jp 丸沼温泉環湖荘の天気(菅沼に最寄りの予報地点)</a>/
+    <a href="https://www.kendobousai-gunma.jp/kisei/RegulationList.htm" rel="noopener">群馬県 道路規制情報(R120金精道路の通行止め)</a>/
     予約・問い合わせ TEL・FAX 0278-58-2958(8:00〜17:00)</div>
 </div>
 
@@ -258,12 +371,13 @@
   <h2 class="mincho">実測地形図 × ポイント推定配置</h2>
   <p class="mapsub">汀線・縮尺・方位・キャンプ村位置=OSM実測(確定)。番号ポイントの位置=実釣記の相対記述からの推定(破線)。<b>西〜北の北岐沼は全域禁漁</b>。</p>
   <div class="maplegend">
-    <span class="lg"><span class="ml-hot"></span><b>金の丸=いまの推奨エリア</b>(上のパネルの時期・スタイルに連動して点灯)</span>
+    <span class="lg"><span class="ml-hot"></span><span><b>金の丸=いまの推奨エリア</b>(上のパネルの時期・スタイルに連動して点灯)</span></span>
     <span class="lg"><span class="ml-dim"></span>薄い丸=今回の推奨外(ポイント自体は実在)</span>
     <span class="lg"><span class="ml-ng"></span>斜線=禁漁区域(北岐沼)</span>
     <span class="lg"><span class="dot-dash"></span>破線=位置は記述からの推定</span>
   </div>
-  <div class="mapscroll">
+  <p class="mapswipe">← 左右にスワイプ(または地図を選んで←/→キー)すると地図の続き(東側の清水沼・ポイント1・2・6・7)が見えます →</p>
+  <div class="mapscroll" tabindex="0" role="group" aria-label="菅沼の地図(左右にスクロールできます)">
   <svg id="lakemap" viewBox="0 -40 960 736" role="img" aria-label="菅沼の実測地形図とポイント配置">
     <defs>
       <linearGradient id="water" x1="0" y1="0" x2="1" y2="0.35">
@@ -325,8 +439,8 @@
     <!-- ===== estimated markers ===== -->
     <g font-size="11" font-weight="700">
       <g id="pt1">
-        <circle cx="852" cy="512" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <text x="852" y="516" text-anchor="middle" fill="var(--est)" class="pn">1</text>
+        <circle cx="850" cy="519" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="850" y="523" text-anchor="middle" fill="var(--est)" class="pn">1</text>
         <text x="946" y="496" text-anchor="end" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">キャンプ場奥のインレット</text>
       </g>
       <g id="pt2">
@@ -350,8 +464,8 @@
         <text x="360" y="548" text-anchor="middle" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">弁天・北岐のくびれ(この先禁漁)</text>
       </g>
       <g id="pt6">
-        <circle cx="812" cy="510" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <text x="812" y="514" text-anchor="middle" fill="var(--est)" class="pn">6</text>
+        <circle cx="812" cy="514" r="10" fill="var(--est-bg)" stroke="var(--est)" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="812" y="518" text-anchor="middle" fill="var(--est)" class="pn">6</text>
         <text x="800" y="494" text-anchor="end" font-size="10" font-weight="600" fill="var(--ink)" class="pl" paint-order="stroke" stroke="var(--halo)" stroke-width="3">清水沼奥のワンド</text>
       </g>
       <g id="pt7">
@@ -362,21 +476,32 @@
     </g>
 
     <!-- locator inset -->
-    <g>
-      <rect x="592" y="16" width="210" height="140" rx="4" fill="var(--panel)" stroke="var(--line)"/>
-      <text x="602" y="34" font-size="10" fill="var(--ink2)" font-weight="600">位置関係(OSM実測)</text>
-      <g transform="translate(598,38) scale(0.585)">
-        <path d="M191.2,110.3L198.2,103.7L204.3,98.5L205.7,91.5L210.7,85.6L217.2,82.2L220.7,76.5L225.3,70.9L231.9,68.2L235.6,64.0L236.9,57.3L237.1,52.2L242.5,50.5L248.5,44.4L251.6,38.1L255.7,38.0L259.1,46.0L261.9,52.5L271.4,54.5L273.5,62.3L274.8,65.7L271.7,70.9L266.0,69.0L263.3,69.7L256.3,76.6L249.9,85.9L252.3,94.4L244.6,98.7L244.6,106.3L247.0,108.8L251.3,102.4L255.3,96.7L261.2,92.5L267.0,96.6L272.8,105.8L278.1,109.4L284.6,103.8L288.7,95.5L296.6,91.9L301.4,93.0L303.6,100.8L305.3,109.5L307.7,115.5L312.3,115.4L318.1,113.9L324.4,115.2L321.6,120.6L321.8,129.3L315.8,132.7L304.1,122.3L287.0,116.9L273.1,110.3L263.4,110.4L254.5,114.2L246.5,111.7L243.2,115.4L239.0,122.5L231.9,124.2L222.7,121.3L218.8,112.6L215.2,107.8L209.3,112.2L204.6,117.6L194.9,113.9L190.8,111.8L191.2,110.3Z" fill="var(--water2)" stroke="var(--shore)" stroke-width="1.8"/>
-        <path d="M71.2,125.9L72.7,122.5L75.7,121.5L76.2,119.6L77.4,108.8L79.8,104.3L80.3,98.6L84.4,97.1L85.5,96.4L86.4,94.4L87.7,90.4L85.2,87.0L83.1,80.9L84.8,80.2L86.9,78.4L88.6,76.4L92.3,75.6L92.7,72.7L92.7,70.6L99.0,69.1L100.7,66.9L101.7,62.8L102.9,60.4L104.6,59.4L106.8,54.6L105.6,52.6L106.1,47.3L107.0,45.6L110.7,44.8L115.3,46.9L117.5,48.7L119.6,48.8L120.7,47.5L123.3,47.2L126.4,47.8L129.7,51.4L133.1,53.3L133.6,55.2L129.9,60.3L126.9,65.0L126.9,69.8L125.1,76.4L123.5,83.0L124.0,85.6L129.9,86.4L131.2,88.9L131.2,90.1L131.6,92.9L129.3,93.6L128.2,96.5L126.0,98.0L122.4,98.1L115.9,101.4L114.5,105.7L114.9,107.1L116.8,106.7L119.7,107.3L119.2,108.6L117.7,111.0L116.7,113.2L115.9,114.8L114.6,117.1L115.4,122.2L104.2,128.0L93.4,140.1L88.7,142.7L73.7,128.9L71.2,125.9Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1.4"/>
-        <path d="M70.7,123.1L68.6,121.9L69.2,120.2L69.1,117.8L69.0,115.4L68.4,112.5L65.7,113.4L63.0,112.6L59.0,111.4L55.4,113.9L51.1,112.3L48.0,110.6L44.9,111.0L42.3,111.6L41.2,112.6L41.2,117.4L38.5,120.0L37.6,124.3L37.1,125.9L33.9,128.0L32.4,131.3L27.4,132.3L23.8,133.1L20.8,133.6L19.9,131.7L17.7,131.8L16.0,136.5L15.9,141.5L16.1,145.9L19.0,149.1L20.3,156.2L18.9,160.8L19.5,162.4L26.9,162.7L38.0,159.4L40.5,142.7L39.7,134.8L43.8,125.0L51.2,121.9L60.1,123.2L64.9,125.6L67.8,124.4L70.5,124.7Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1.4"/>
-      </g>
+    <g transform="translate(592,16) scale(0.62)">
+    <!-- locator inset: 5 lakes, OSM outlines, 49.2 m/px at scale 1 -->
+    <g id="locator" transform="translate(0,0)">
+    <rect x="0" y="0" width="320" height="303" rx="4" fill="var(--panel)" stroke="var(--line)"/>
+    <text x="10" y="17" font-size="11" fill="var(--ink2)" font-weight="600">位置関係(OSM実測・5湖・北が上)</text>
+    <g transform="translate(10,30)">
+      <path d="M15.7,24.5L17.1,23.1L18.3,16.7L19.6,16.3L20.2,15.0L19.0,12.1L21.6,10.5L21.6,9.2L23.7,8.4L25.6,4.8L25.5,2.4L30.8,2.8L32.8,4.3L30.1,12.8L32.0,13.6L32.5,15.4L31.2,16.9L28.1,17.7L27.7,19.2L29.2,19.6L27.9,21.1L28.0,23.5L23.2,26.1L21.2,29.3L16.1,26.2L15.7,24.5Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+      <path d="M49.1,20.2L52.7,16.9L53.8,13.8L56.8,12.2L58.9,8.8L60.9,8.4L61.6,4.5L64.1,3.0L66.2,0.0L67.8,0.6L68.4,4.0L71.9,5.3L72.5,8.4L70.8,9.4L69.7,8.4L65.9,12.1L66.1,15.8L63.9,17.0L64.0,19.7L68.1,15.2L73.3,19.9L76.2,16.1L79.3,15.1L81.1,21.3L85.0,21.1L86.3,22.0L85.5,22.1L84.7,26.8L80.5,23.5L71.0,19.9L68.2,20.4L65.6,22.2L64.0,20.5L63.1,23.1L59.6,24.0L57.8,23.2L56.2,19.6L55.2,19.6L52.3,22.4L49.0,21.1L49.1,20.2Z" fill="var(--water2)" stroke="var(--shore)" stroke-width="1.6"/>
+      <path d="M15.5,23.7L14.9,20.8L12.5,20.4L10.8,21.3L9.5,20.2L7.6,20.4L4.9,26.0L0.7,26.3L0.0,29.5L1.3,31.6L1.2,34.6L5.5,34.3L6.8,33.3L6.8,27.3L8.6,23.8L11.4,23.3L14.1,24.4L15.5,23.7Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+      <path d="M165.7,71.0L167.1,71.1L168.3,68.6L172.3,66.8L170.8,70.5L171.2,71.6L169.3,71.0L169.3,73.3L170.8,76.6L171.3,74.3L173.4,74.2L174.7,79.5L177.1,82.6L176.2,85.5L172.9,84.9L171.5,85.9L169.4,85.3L168.0,84.1L167.3,81.5L164.2,79.8L164.8,75.7L161.1,73.7L165.7,71.0Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+      <path d="M278.6,240.2L279.8,242.3L277.2,248.2L273.5,252.6L269.8,255.1L268.2,255.4L266.7,254.4L263.7,257.0L259.4,255.5L259.2,254.0L263.3,246.3L262.7,245.6L260.2,246.6L259.9,249.3L256.2,254.7L254.0,254.7L253.6,252.7L250.9,255.2L243.5,255.4L240.9,253.5L237.1,254.3L235.5,252.2L236.5,248.7L236.0,246.5L238.5,244.1L240.5,244.1L240.7,241.5L242.6,240.3L241.6,237.6L244.3,235.0L241.7,232.4L238.3,232.0L236.8,229.6L240.3,224.1L239.9,220.2L238.1,220.6L236.3,223.7L233.9,224.3L229.2,220.7L229.7,218.8L228.9,216.1L228.0,215.9L225.1,217.1L223.2,219.8L220.5,221.1L219.1,222.8L218.9,225.1L213.5,225.9L212.2,225.0L212.7,223.3L211.8,222.7L211.4,219.6L209.2,220.0L207.2,222.3L203.6,222.9L200.9,221.8L201.4,217.8L194.5,218.4L193.5,217.0L193.7,215.1L192.6,214.3L189.7,214.8L189.4,217.0L186.7,219.0L181.7,220.7L177.8,218.4L176.3,215.1L174.2,213.2L171.6,213.0L170.5,212.0L165.8,213.9L162.9,213.1L161.5,210.4L163.8,204.2L163.2,202.7L164.5,202.4L165.1,200.7L165.4,192.2L169.1,190.5L168.9,187.4L170.6,184.8L175.6,182.5L180.4,185.7L181.8,188.5L183.2,187.1L188.7,186.1L188.5,184.6L191.0,182.7L192.5,183.3L193.4,185.2L198.1,186.8L200.1,186.2L202.0,188.4L204.0,188.9L211.7,185.5L217.6,190.1L219.3,187.0L218.6,185.5L219.3,186.1L222.2,184.7L225.2,186.9L227.4,183.7L234.9,181.9L237.4,184.8L238.0,191.6L246.4,194.5L254.6,202.4L260.8,206.1L265.6,206.8L269.6,210.2L273.0,210.4L274.5,211.6L279.9,210.9L281.5,211.6L282.5,210.5L285.3,210.1L292.5,213.4L300.0,214.5L296.6,222.3L291.4,225.3L290.3,230.4L289.5,230.4L287.9,234.3L283.8,235.2L281.8,237.4L278.7,238.6L278.6,240.2Z" fill="var(--water1)" stroke="var(--shore)" stroke-width="1"/>
+      <line x1="24.4" y1="28" x2="38" y2="38" stroke="var(--ink2)" stroke-width="0.8"/>
+      <line x1="8.2" y1="32" x2="14" y2="50" stroke="var(--ink2)" stroke-width="0.8"/>
       <g paint-order="stroke" stroke="var(--panel)" stroke-width="3">
-        <text x="756" y="76" font-size="10" fill="var(--gold-strong)" font-weight="700" text-anchor="end">菅沼(本図)</text>
-        <text x="655" y="96" font-size="9" fill="var(--ink2)">丸沼</text>
-        <text x="619" y="141" font-size="9" fill="var(--ink2)">大尻沼</text>
-        <text x="602" y="153" font-size="8.5" fill="var(--muted)" stroke-width="0">丸沼・大尻沼=別管理(環湖荘)・別ルール</text>
+      <text x="36" y="44" text-anchor="start" font-size="11" fill="var(--ink2)" font-weight="500">丸沼</text>
+      <text x="0" y="58" text-anchor="start" font-size="11" fill="var(--ink2)" font-weight="500">大尻沼</text>
+      <text x="66" y="-2" text-anchor="middle" font-size="13" fill="var(--gold-strong)" font-weight="700">菅沼(本図)</text>
+      <text x="184" y="82" text-anchor="start" font-size="11" fill="var(--ink2)" font-weight="500">湯ノ湖</text>
+      <text x="228" y="176" text-anchor="middle" font-size="11" fill="var(--ink2)" font-weight="500">中禅寺湖</text>
       </g>
+      <g stroke="var(--ink2)" stroke-width="1.2"><line x1="198.5" y1="263" x2="300.0" y2="263"/><line x1="198.5" y1="259" x2="198.5" y2="267"/><line x1="300.0" y1="259" x2="300.0" y2="267"/></g>
+      <text x="249.2" y="279" font-size="10" fill="var(--ink2)" text-anchor="middle">5km</text>
     </g>
+    </g>
+    </g>
+    <text x="592" y="216" font-size="8.5" fill="var(--muted)">丸沼・大尻沼=別管理(環湖荘)・別ルール</text>
 
     <!-- scale bar -->
     <g stroke="var(--ink2)" stroke-width="1.5">
@@ -424,7 +549,7 @@
     <table class="kv num">
       <tr><td>営業日</td><td><b>指定52日のみ</b>(6/20〜10/18)。下のカレンダー参照</td></tr>
       <tr><td>時間</td><td>受付7:30〜/出船7:45〜/釣り8:00〜17:00</td></tr>
-      <tr><td>予約</td><td><b>完全予約制(ボート40艘)</b>。5/1〜FAX受付→応募多数日は抽選(締切5/30)→6/1以降当選FAX連絡→空日は随時受付。<b>解禁以降は電話でも受付</b></td></tr>
+      <tr><td>予約</td><td><b>完全予約制(ボート40艘)</b>。5/1〜FAX受付→応募多数日は抽選(締切5/30)→当選者へFAX連絡(公式逐語「締切5月30日以降当選者はFAXにてご連絡」)→空日は随時受付。<b>解禁以降は電話でも受付</b></td></tr>
       <tr><td>連絡先</td><td>TEL・FAX 0278-58-2958(8:00〜17:00)</td></tr>
       <tr><td>過去実績</td><td>2025年は6/21解禁(当日 最低11℃/最高25℃)</td></tr>
     </table>
@@ -477,7 +602,7 @@
       <li><b>ニジマス</b>が主役(公式言及も「レインボー」)。透明な水で育ち背が緑がかる<b>「グリーンバック」</b>と呼ばれる個体も(ANA 2021)</li>
       <li><b>ヒメマス</b> — 実釣記録あり(2014年・2gスプーンで混獲)。キャンプ場奥の流れ込みが産卵遡上河川とされる(ActiveNatureLife)</li>
       <li>イワナ・ウグイ — 二次情報(ANA)のみ</li>
-      <li class="oknote">ブラウン・レイクトラウトの<b>管理者・文献記録は確認できず</b>(丸沼との違い)。2026-07-30の実釣X投稿に「#レイクトラウト」タグが1件あるが魚種同定は未検証。64cm「ヤシオマス?」も1件(2014・釣り人の推測)</li>
+      <li class="warnnote">ブラウン・レイクトラウトの<b>管理者・文献記録は確認できず</b>(丸沼との違い)。2026-07-30の実釣X投稿に「#レイクトラウト」タグが1件あるが魚種同定は未検証。64cm「ヤシオマス?」も1件(2014・釣り人の推測)</li>
     </ul>
   </div>
 
@@ -574,7 +699,7 @@
   <h2 class="mincho">予約の実務 <span class="tag tag-fix">確定(公式フロー)</span></h2>
   <div class="cols2">
     <ul>
-      <li><b>5/1〜 FAX受付開始</b>(住所・電話・FAX番号・人数を明記) → 応募多数日は<b>抽選</b>(締切5/30) → 6/1以降 当選者へFAX連絡</li>
+      <li><b>5/1〜 FAX受付開始</b>(住所・電話・FAX番号・人数を明記) → 応募多数日は<b>抽選</b>(締切5/30) → 締切5/30以降に当選者へFAX連絡(公式表記に準拠・逐語は上表)</li>
       <li>抽選後の<b>空日は随時受付</b>。<b>解禁(6/20)以降は電話でも受付</b> — シーズン中の空き確認は電話が早い</li>
     </ul>
     <ul>
@@ -602,7 +727,7 @@
   <div class="cols3">
     <ul>
       <li>関越道 沼田ICからR120で<b>約70分(公式)</b>。<span class="warnnote">県観光公式は約80分と記載(出典間で差)</span>。宇都宮ICから約90分</li>
-      <li>R120金精道路は<b>冬季閉鎖</b>: 2025-12-25正午〜2026-04-24正午(金精トンネル〜丸沼スキー場入口12.1km・県公式)。菅沼は閉鎖区間内</li>
+      <li>R120金精道路は<b>冬季閉鎖</b>: 2025-12-25正午〜2026-04-24正午(群馬県管理区間=金精トンネル〜丸沼スキー場入口12.1km・群馬県道路管理課/栃木県管理区間=ゲート規制5.5km・栃木県公式)。<b>菅沼は閉鎖区間内</b>。閉鎖期間は毎年12/25正午〜4/24正午(日光湯元ビジターセンター案内・2026-09-07取得の逐語「毎年12月25日正午～4月24日正午まで冬期閉鎖」)</li>
       <li>駐車場はキャンプ村入口(国道沿い)。バス「日光尾瀬かたしなエクスプレス」も公式案内に記載</li>
     </ul>
     <ul>
@@ -623,8 +748,9 @@
 </div>
 
 <footer>
-  <b>出典</b> — 規則・料金・2026年営業日・予約方法: sugenuma.com(公式・/fishing /charge /access /annai、2026-08-25取得・逐語照合)/諸元: コトバンク(ブリタニカ・日本大百科全書・世界大百科事典・日本歴史地名大系・マイペディア)・Wikipedia・全国観光資源台帳(日本交通公社)・心にググっと観光ぐんま・かたしないろ(片品村観光協会)/冬季閉鎖: 群馬県道路管理課/実釣記録: ActiveNatureLife(2020)・Fly Fishing備忘録 caddis02(2019)・トーナメントジャンキー junkie(2014)・森とさかな(2019)・JFCC(2019)・台風カレー(2021)・TARATA FISHAWAY(2024)・群馬のグンマーブログ(2023)・ティムコ アンダーハンド釣行記(2019・Wayback Machine併用)/水温・透明度実測: 〜湖上の景色に誘われて〜(naturum)/魚種・タックル: ANA Travel &amp; Life(2021・湖沼諸元の数値は孤立値のため不採用、タックル数値は参考採用)/熊: kuma-watch.jp・kumamap.com/2026年シーズン一次情報: X @sugi_aka_kuro(2026-07-30釣行)・@laidbackbsn(2026-08-02滞在)・@2010samon(2024-06 放流傍証) — 投稿年はすべてSnowflake ID解読で機械検証・そらまめキッズアドベンチャー関東ブログ(2026-07/08)/地形・面積・距離・位置: © OpenStreetMap contributors(ODbL)による実測。
+  <b>出典</b> — 規則・料金・2026年営業日・予約方法: sugenuma.com(公式・/fishing /charge /access /annai、2026-08-25取得・逐語照合)/諸元: コトバンク(ブリタニカ・日本大百科全書・世界大百科事典・日本歴史地名大系・マイペディア)・Wikipedia・全国観光資源台帳(日本交通公社)・心にググっと観光ぐんま・かたしないろ(片品村観光協会)/冬季閉鎖: 群馬県道路管理課・栃木県 道路規制情報(栃木側ゲート規制)・日光湯元ビジターセンター/実釣記録: ActiveNatureLife(2020)・Fly Fishing備忘録 caddis02(2019)・トーナメントジャンキー junkie(2014)・森とさかな(2019)・JFCC(2019)・台風カレー(2021)・TARATA FISHAWAY(2024)・群馬のグンマーブログ(2023)・ティムコ アンダーハンド釣行記(2019・Wayback Machine併用)/水温・透明度実測: 〜湖上の景色に誘われて〜(naturum)/魚種・タックル: ANA Travel &amp; Life(2021・湖沼諸元の数値は孤立値のため不採用、タックル数値は参考採用)/熊: kuma-watch.jp・kumamap.com/2026年シーズン一次情報: X @sugi_aka_kuro(2026-07-30釣行)・@laidbackbsn(2026-08-02滞在)・@2010samon(2024-06 放流傍証) — 投稿年はすべてSnowflake ID解読で機械検証・そらまめキッズアドベンチャー関東ブログ(2026-07/08)/地形・面積・距離・位置: © OpenStreetMap contributors(ODbL)による実測。
   <br>姉妹編(5湖): <a href="https://oatbox99.github.io/marunuma-map/" rel="noopener">丸沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/ojirinuma-map/" rel="noopener">大尻沼 一枚攻略図</a> / <a href="https://oatbox99.github.io/yunoko-map/" rel="noopener">湯ノ湖 一枚攻略図</a> / <a href="https://oatbox99.github.io/chuzenjiko-map/" rel="noopener">中禅寺湖 一枚攻略図</a>(2026-09-05 追加)。2026-08-26作成。全ファクトは多エージェント採掘+敵対検証(公式原文との逐語照合・独立2系統照合・引用実在スポットチェック)を通過したもののみ掲載。
+  <br><b>最終確認 2026-09-07</b>(公式ページの再取得は2026-09-05〜07・5湖相互リンクの HTTP 200 確認)。<b>本図は公式規則の代替ではない — 出発前に必ず公式サイト・電話で当日情報を確認すること。</b>
 </footer>
 </div>
 
@@ -659,7 +785,7 @@ var PHASES=[
   name:'盛夏 — ドライのサイトと夕方の時合',temps:'実測水温はこの湖に1点のみ: 22℃(2016-08-11・日なた表層)。「夏も雪解け水で冷たい」が全系統一致',
   tana:'岸際30〜50cm+浅場',tanaNote:'どん深湖でカケアガリは岸から1m以内 — 岸際にドライを置いて待つ(2019-07-06: 40〜55cm7本)。水深10m超は反応なし',
   flyPts:[1,2,4,7],lurePts:[1,2,4,7],
-  fly:['岸際30〜50cmにブラックパラシュート等を浮かべ「待つ」','張り出した枝の下の岸際が一等地(2019-07-24: 60cm超頭に4尾)','前日豪雨なら沈める釣りへ即切替(2021-07-04: ドライ全滅→55cm超2匹)'],
+  fly:['岸際30〜50cmにブラックパラシュート等を浮かべ「待つ」','張り出した枝の下の岸際が一等地(2019-07-24: 60cm超頭に4尾)','前日豪雨なら沈める釣りへ即切替(2021-07-04: ドライ全滅→55cm前後2尾・1尾は55cm超)'],
   lure:['虫系トップ+岸際平行引きの二本立て','スプーン5〜10gは定番だが虫優勢の日は虫系へ','夕方ビッグドライ反応急上昇の実測(2024-07-13) — ルアーもトップを最後まで'],
   records:['60cm超+計4尾 枝下岸際(2019-07-24)','52cm完璧ヒレ+計7本(2019-07-06 ドライ4+ハーリング3)','55cm前後×2・1尾は55cm超(2021-07-04 豪雨翌日)','2026-07-30: 昼まで本降りの雨で「活性上がってウハウハ」(X実釣・年をID検証済)'],
   warn:'減水年は清水・弁天間チャネルが通行不能(2019年-3m)。行き来の可否を受付で確認'},
@@ -690,7 +816,7 @@ var PHASES=[
 ];
 var WINDS=[
  {id:'wind',label:'風が強い',advice:'手漕ぎ+前後アンカーでも流されるほど吹く(2019-07-06実測)。キャストも壊れる(2019-09-01)。風裏の岸際に逃げて丁寧に打つか、早めの撤収判断を。菅沼の風は「待てば止む」保証がない。',ev:'caddis02 2019-07-06/JFCC 2019-09-01'},
- {id:'rain',label:'雨がらみの日',advice:'区別が重要 — ①前日豪雨の翌日: 魚が沈む(湖一周ドライバイトゼロの実測)。沈める釣りへ即切替で55cm超2匹。②降っている最中: むしろ活性が上がった実測(2026-07-30・昼まで本降りで好調)。雨中は攻め、豪雨明けは沈める。',ev:'台風カレー 2021-07-04/X実釣 2026-07-30'},
+ {id:'rain',label:'雨がらみの日',advice:'区別が重要 — ①前日豪雨の翌日: 魚が沈む(湖一周ドライバイトゼロの実測)。沈める釣りへ即切替で55cm前後2尾(1尾は55cm超)。②降っている最中: むしろ活性が上がった実測(2026-07-30・昼まで本降りで好調)。雨中は攻め、豪雨明けは沈める。',ev:'台風カレー 2021-07-04/X実釣 2026-07-30'},
  {id:'calm',label:'無風・ベタ凪',advice:'本州トップ級の透明度でサイトフィッシング成立。岸際30〜50cmにドライを置いて「待つ」— 魚から丸見えなのでキャスト数を絞り、ティペットは公式推奨3X以上で細くしすぎない。',ev:'caddis02 2019-07-06/公式'},
  {id:'evening',label:'夕方が近い',advice:'夕方の時合でビッグドライへの反応が急上昇した実測。終了は17:00 — 最後の1時間を岸際トップに賭ける価値がある。',ev:'TARATA 2024-07-13'},
  {id:'cold',label:'雨・低温の日',advice:'気温5〜10℃で6時間ボウズの実測(10月)。ただし同じ日に他艇はマラブー系で岸際えぐれ1〜2投目ヒット — 釣り方の問題でもある。防寒を最優先し、沈める釣りに徹する。',ev:'gunma-gunmer 2023-10-04'},
@@ -728,6 +854,10 @@ function renderOpenState(){
   var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
   var el=document.getElementById('openstate');
   var wd=['日','月','火','水','木','金','土'];
+  if(now.getFullYear()!==YEAR){
+    el.innerHTML='<span class="openbadge is-unknown">本日'+(now.getMonth()+1)+'/'+now.getDate()+'('+wd[now.getDay()]+')の営業可否は本図では判定できません — 本図は'+YEAR+'年シーズン版です</span><p class="nextopen">菅沼の営業日は毎年2月頃に公式サイトで発表される<b>指定日のみ</b>。当年の営業日は <a href="https://www.sugenuma.com/" rel="noopener" style="color:var(--gold)">sugenuma.com</a> と電話 0278-58-2958 で確認。</p>';
+    return;
+  }
   if(isOpen(now.getFullYear(),now.getMonth()+1,now.getDate())){
     el.innerHTML='<span class="openbadge is-open">◎ 本日('+(now.getMonth()+1)+'/'+now.getDate()+')は2026年の営業日</span><p class="nextopen">完全予約制(40艘) — 予約なしの飛び込みは不可。空き確認は電話 0278-58-2958。</p>';
   } else {
@@ -829,7 +959,7 @@ if(qp){ PHASES.forEach(function(p){ if(p.id===qp) forced=p; }); }
 state.phase=forced||phaseForToday();
 var now=new Date();
 var wd=['日','月','火','水','木','金','土'][now.getDay()];
-document.getElementById('todayline').textContent='— 今日は'+(now.getMonth()+1)+'月'+now.getDate()+'日('+wd+')。自動判定: '+state.phase.name;
+document.getElementById('todayline').textContent='— 今日は'+(now.getMonth()+1)+'月'+now.getDate()+'日('+wd+')。'+(forced?'表示中(手動選択): ':(now.getFullYear()===YEAR?'自動判定: ':YEAR+'年の時期区分を参考表示: '))+state.phase.name;
 renderOpenState();
 renderCal();
 render();
